@@ -1,0 +1,113 @@
+---
+import '../styles/global.css'
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Yora Academy</title>
+  </head>
+  <body class="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
+    <div class="fixed inset-0 -z-10 bg-grid-faded opacity-30 pointer-events-none"></div>
+    <header class="border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm sticky top-0 z-10">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="/assets/yora-logo.jpg" alt="Yora Academy Logo" class="h-7 w-auto rounded-full" />
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">Yora Academy</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme">
+            <img src="/dark-theme-svgrepo-com.svg" alt="Dark theme" class="w-5 h-5" id="icon-dark" />
+            <img src="/moon-dark-theme-svgrepo-com.svg" alt="Light theme" class="w-5 h-5 hidden" id="icon-light" />
+          </button>
+          <a href="https://github.com" target="_blank" rel="noopener" class="flex items-center justify-center w-5 h-5 rounded-full overflow-hidden hover:ring-2 hover:ring-gray-200 transition">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=64" alt="GitHub" class="w-full h-full object-cover" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex-1 flex items-center justify-center px-4 py-12">
+      <div class="text-center max-w-md">
+        <img src="/assets/yora-logo.jpg" alt="Yora Academy Logo" class="w-48 h-48 mx-auto mb-8 rounded-full object-cover border-4 border-blue-600 dark:border-blue-400 shadow-xl" />
+        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">Welcome to Yora Academy</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">An open source documentation platform that works from local development to deployment. This is an experimental base for learning how to build real projects.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/docs" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">View Documentation</a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 font-medium rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">View Source</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800/50">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">Platform Features</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Open Source</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Fully open source codebase you can explore, modify, and learn from.</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 110-4h14a2 2 0 110-4M5 12a2 2 0 100 4h14a2 2 0 100 4"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Local to Deployment</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">Run entirely locally for development or deploy to production with ease.</p>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V7a2 2 0 00-2-2H7a2 2 0 00-2 2v4m16 0h-5V7a2 2 0 00-2-2H9a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Experimental Base</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">A playground for building and learning real-world project architecture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-gray-200 dark:border-gray-700 py-4 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4 text-center text-xs text-gray-500 dark:text-gray-400">
+        &copy; {new Date().getFullYear()} Yora Academy
+      </div>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const iconDark = document.getElementById('icon-dark');
+      const iconLight = document.getElementById('icon-light');
+      const htmlEl = document.documentElement;
+      
+      const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (currentTheme === 'dark') {
+        htmlEl.classList.add('dark');
+        iconDark?.classList.add('hidden');
+        iconLight?.classList.remove('hidden');
+      }
+
+      themeToggle?.addEventListener('click', () => {
+        const isDark = htmlEl.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (isDark) {
+          iconDark?.classList.add('hidden');
+          iconLight?.classList.remove('hidden');
+        } else {
+          iconDark?.classList.remove('hidden');
+          iconLight?.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

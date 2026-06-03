@@ -1,0 +1,33 @@
+---
+import DocsLayout from '@/layouts/DocsLayout.astro'
+---
+
+<DocsLayout>
+  <h1>Installation</h1>
+  <p>To get started with Yora Academy, follow these steps:</p>
+
+  <h2>Prerequisites</h2>
+  <ul>
+    <li>Node.js >= 22.12.0</li>
+    <li>npm or yarn package manager</li>
+    <li>A modern web browser (Chrome, Firefox, Safari, or Edge)</li>
+  </ul>
+
+  <h2>Steps</h2>
+  <ol>
+    <li>Clone the repository: <code>git clone https://github.com/your-org/yora-academy.git</code></li>
+    <li>Navigate to the project directory: <code>cd yora-academy</code></li>
+    <li>Install dependencies: <code>npm install</code></li>
+    <li>Start the development server: <code>npm run dev</code></li>
+    <li>Open your browser and visit <code>http://localhost:4321</code></li>
+  </ol>
+
+  <h2>Build for Production</h2>
+  <p>When you're ready to deploy, run the build command:</p>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code>npm run build</code></pre>
+
+  <h2>Environment Variables</h2>
+  <p>Create a <code>.env</code> file in the root directory with the following variables:</p>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code>DATABASE_URL=your_database_url
+API_KEY=your_api_key</code></pre>
+</DocsLayout>

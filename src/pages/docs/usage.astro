@@ -1,0 +1,60 @@
+---
+import DocsLayout from '@/layouts/DocsLayout.astro'
+---
+
+<DocsLayout>
+  <h1>Usage</h1>
+  <p>Once you have installed Yora Academy, you can start using it by following these instructions.</p>
+
+  <h2>Running the Application</h2>
+  <p>After starting the development server with <code>npm run dev</code>, open your browser and navigate to <code>http://localhost:4321</code>. You should see the welcome page.</p>
+
+  <h2>Available Scripts</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto">
+<code>
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build</code></pre>
+
+  <h2>Configuration</h2>
+  <p>The main configuration file is <code>astro.config.mjs</code>. Here you can customize site settings, integrations, and output formats.</p>
+
+  <h2>Deployment</h2>
+  <p>To deploy your documentation site, run the build command and upload the <code>dist</code> folder to your hosting provider.</p>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code>npm run build</code></pre>
+
+  <h2>Laravel Integration Example</h2>
+  <p>Here's a sample Laravel controller integration:</p>
+
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code>
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Course;
+
+class CourseController extends Controller
+&#123;
+    public function index()
+    &#123;
+        $courses = Course::all();
+        return view('courses.index', compact('courses'));
+    &#125;
+
+    public function show($id)
+    &#123;
+        $course = Course::findOrFail($id);
+        return view('courses.show', compact('course'));
+    &#125;
+&#125;
+  </code></pre>
+
+  <h2>API Usage</h2>
+  <p>You can interact with the API using the following endpoints:</p>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code>GET /api/courses
+POST /api/courses
+GET /api/courses/:id
+PUT /api/courses/:id
+DELETE /api/courses/:id</code></pre>
+</DocsLayout>

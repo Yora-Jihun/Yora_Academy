@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+.bg-grid-faded {
+  background-image: 
+    linear-gradient(to bottom, #d1d5db 1px, transparent 1px), 
+    linear-gradient(to right, #d1d5db 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0;
+}
+
+.dark .bg-grid-faded {
+  background-image: 
+    linear-gradient(to bottom, #4b5563 1px, transparent 1px), 
+    linear-gradient(to right, #4b5563 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0;
+}
+
+/* Typography improvements for prose content */
+.prose {
+  color: #374151;
+}
+
+.dark .prose {
+  color: #d1d5e0;
+}
+
+.prose h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.dark .prose h1 {
+  color: #f3f4f6;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dark .prose h2 {
+  color: #e5e7eb;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.625;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+}
+
+.prose a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.dark .prose a {
+  color: #60a5fa;
+}
+
+.prose code {
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.dark .prose code {
+  background-color: #1f2937;
+}
+
+.prose pre {
+  margin-bottom: 1rem;
+}
+
+.prose pre code {
+  background-color: transparent;
+}
+
+.prose blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.dark .prose blockquote {
+  border-color: #4b5563;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+}
+
+.dark .prose th,
+.dark .prose td {
+  border-color: #4b5563;
+}
+
+/* Dark mode CSS for elements using dark: variant classes */
+[data-theme="dark"], .dark {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.dark .dark\:hidden {
+  display: none;
+}
+
+.dark .dark\:inline-block {
+  display: inline-block;
+}
+
+.dark .dark\:block {
+  display: block;
+}
+
+.dark .dark\:text-gray-100 {
+  color: #f3f4f6;
+}
+
+.dark .dark\:text-gray-200 {
+  color: #e5e7eb;
+}
+
+.dark .dark\:text-gray-300 {
+  color: #d1d5db;
+}
+
+.dark .dark\:text-gray-400 {
+  color: #9ca3af;
+}
+
+.dark .dark\:border-gray-700 {
+  border-color: #374152;
+}
+
+.dark .dark\:bg-gray-800 {
+  background-color: #1f2937;
+}
+
+.dark .dark\:bg-gray-800\/50 {
+  background-color: rgba(31, 41, 59, 0.5);
+}
+
+.dark .dark\:bg-gray-800\/80 {
+  background-color: rgba(31, 41, 59, 0.8);
+}
+
+.dark .dark\:bg-gray-900 {
+  background-color: #111827;
+}
+
+.dark .dark\:hover\:bg-gray-600:hover {
+  background-color: #4b5563;
+}
+
+.dark .dark\:hover\:bg-gray-700:hover {
+  background-color: #374152;
+}
+
+.dark .dark\:hover\:text-gray-100:hover {
+  color: #f3f4f6;
+}
+
+/* Theme toggle icon visibility */
+.dark #icon-dark {
+  display: none;
+}
+
+#icon-dark {
+  filter: invert(0.3);
+}
+
+.dark #icon-light {
+  filter: invert(0.8);
+}
