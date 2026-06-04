@@ -1,0 +1,30 @@
+---
+import DocsLayout from '@/layouts/DocsLayout.astro'
+
+const tailwindCode = `<div class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">User List</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        @foreach($users as $user)
+            <div class="p-4 border rounded-lg hover:shadow-lg transition">
+                <h3 class="font-semibold text-gray-700 dark:text-gray-300">{{$user->name}}</h3>
+            </div>
+        @endforeach
+    </div>
+</div>`
+
+const tailwindInstall = `npm install -D tailwindcss
+npx tailwindcss init`
+---
+
+<DocsLayout>
+  <h1 id="tailwind">Tailwind CSS</h1>
+  
+  <h2 id="overview">Overview</h2>
+  <p>Utility-first CSS framework for rapid UI development with responsive design and dark mode support.</p>
+  
+  <h2 id="installation">Installation</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={tailwindInstall}></code></pre>
+  
+  <h2 id="usage">Usage Example</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={tailwindCode}></code></pre>
+</DocsLayout>

@@ -1,0 +1,58 @@
+---
+import DocsLayout from '@/layouts/DocsLayout.astro'
+
+const envConfig = `DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=`
+
+const migrationCode = `use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+class CreateUsersTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('users');
+    }
+}`
+
+const eloquentCode = `namespace App\\Models;
+
+use Illuminate\\Database\\Eloquent\\Model;
+
+class User extends Model
+{
+    protected $fillable = ['name', 'email'];
+}`
+---
+
+<DocsLayout>
+  <h1 id="mysql">MySQL</h1>
+  
+  <h2 id="overview">Overview</h2>
+  <p>MySQL is a relational database used with Laravel's Eloquent ORM for data persistence.</p>
+  
+  <h2 id="configuration">Configuration</h2>
+  <p>Configure MySQL in <code>.env</code>:</p>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={envConfig}></code></pre>
+  
+  <h2 id="migration">Migration Example</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={migrationCode}></code></pre>
+  
+  <h2 id="eloquent">Eloquent Model</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={eloquentCode}></code></pre>
+</DocsLayout>

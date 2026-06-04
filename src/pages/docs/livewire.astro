@@ -1,0 +1,40 @@
+---
+import DocsLayout from '@/layouts/DocsLayout.astro'
+
+const livewireCode = `namespace App\Http\Livewire;
+
+use Livewire\Component;
+use App\Models\User;
+
+class UserSearch extends Component
+{
+    public $search = '';
+    public $users = [];
+
+    public function updatedSearch()
+    {
+        $this->users = User::where('name', 'like', '%' . $this->search . '%')->get();
+    }
+
+    public function render()
+    {
+        return view('livewire.user-search');
+    }
+}`
+---
+
+<DocsLayout>
+  <h1 id="livewire">Livewire</h1>
+  
+  <h2 id="overview">Overview</h2>
+  <p>Full-stack framework for Laravel that makes building dynamic interfaces simple without writing JavaScript.</p>
+  
+  <h2 id="installation">Installation</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={`composer require livewire/livewire`}></code></pre>
+  
+  <h2 id="components">Creating Components</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={`php artisan make:livewire user-search`}></code></pre>
+  
+  <h2 id="livewire-component">Component Class</h2>
+  <pre class="bg-gray-900 dark:bg-gray-800 text-gray-100 dark:text-gray-200 p-4 rounded-lg overflow-x-auto"><code set:html={livewireCode}></code></pre>
+</DocsLayout>
