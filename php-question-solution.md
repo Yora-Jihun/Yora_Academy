@@ -1,0 +1,102 @@
+100 PHP Console Coding Problems (PHP only — CLI)
+
+Implement a script that prints Hello World.
+Write a CLI program that reads two integers and prints their sum.
+Swap two variables without using a third variable and print the results.
+Detect whether a given integer (from STDIN) is even or odd.
+Find the largest of three integers read from STDIN.
+Generate and print the multiplication table for a given number up to 12.
+Reverse a string read from STDIN without using built‑in reverse functions.
+Count vowels and consonants in a string from STDIN.
+Compute factorial of a nonnegative integer using an iterative approach.
+Compute factorial using recursion and compare runtime with the iterative version.
+Print the first N Fibonacci numbers (N from STDIN) using iteration.
+Print the Nth Fibonacci number using recursion with memoization.
+Check if a string is a palindrome (case insensitive, ignore non‑letters).
+Check whether a number is prime (optimize by checking up to sqrt(n)).
+List all prime numbers up to N using the Sieve of Eratosthenes.
+Determine whether a number is an Armstrong (narcissistic) number.
+Sum the digits of an integer and print the result.
+Find the greatest common divisor (GCD) of two integers using Euclid’s algorithm.
+Find the least common multiple (LCM) of two integers using GCD.
+Implement a simple calculator that supports + - * / % from CLI input.
+Read a list of integers and print the minimum and maximum values.
+Sort an array of integers using bubble sort and count swaps.
+Sort an array using insertion sort and measure iterations.
+Sort an array using selection sort and print the sorted array.
+Implement merge sort for an array of integers (recursive).
+Implement quicksort for an array of integers (choose pivot strategy).
+Implement binary search on a sorted array (iterative and recursive).
+Remove duplicate values from an array while preserving order.
+Find the second largest unique number in an array.
+Rotate an array to the right by K positions (K from STDIN).
+Partition an array into two subarrays with minimal difference of sums.
+Find the subarray with maximum sum (Kadane’s algorithm).
+Count occurrences of each element in an array and print frequencies.
+Implement a stack using a PHP array with push, pop, peek, and isEmpty.
+Implement a queue using a PHP array with enqueue, dequeue, peek, and isEmpty.
+Implement a circular queue with fixed capacity and error handling.
+Implement a singly linked list with insert, delete, find, and reverse methods.
+Detect a cycle in a singly linked list (Floyd’s tortoise and hare).
+Merge two sorted linked lists into one sorted linked list.
+Find the middle node of a singly linked list in one pass.
+Implement a doubly linked list with insertBefore, insertAfter, and remove.
+Implement a stack using a linked list (no arrays).
+Implement a queue using a linked list (no arrays).
+Implement a binary search tree (BST) with insert, search, delete.
+Traverse a BST in-order, pre-order, and post-order (recursive and iterative).
+Find the height (max depth) of a binary tree.
+Check if a binary tree is balanced (difference of heights ≤ 1 for all nodes).
+Find the lowest common ancestor (LCA) of two nodes in a BST.
+Convert a sorted array into a height‑balanced BST.
+Serialize and deserialize a binary tree to/from a string format.
+Implement a min‑heap (priority queue) with insert, extractMin, peek.
+Use the heap to perform heap sort on an array.
+Implement Dijkstra’s algorithm for shortest paths on a weighted graph (adjacency list).
+Implement Breadth‑First Search (BFS) and Depth‑First Search (DFS) on a graph.
+Detect if an undirected graph is connected.
+Detect cycles in a directed graph (use DFS and recursion stack).
+Topologically sort a directed acyclic graph (Kahn’s algorithm).
+Find connected components in an undirected graph.
+Implement union‑find (disjoint set) with path compression and union by rank.
+Solve the two‑sum problem: find indices of two numbers that add to target.
+Solve three‑sum: list unique triplets that sum to zero (optimize for duplicates).
+Implement sliding window maximum for an array (deque approach).
+Implement longest increasing subsequence (LIS) — O(n log n) solution.
+Implement longest common subsequence (LCS) using dynamic programming.
+Implement edit distance (Levenshtein distance) between two strings.
+Implement coin change (minimum coins) using dynamic programming.
+Implement subset sum decision problem using DP (bitset or table).
+Implement knapsack 0/1 problem using dynamic programming.
+Implement matrix chain multiplication order (DP).
+Implement palindrome partitioning minimum cuts (DP).
+Implement regular expression match (support . and *) using DP.
+Implement a trie (prefix tree) for lowercase words with insert/search/prefix.
+Autocomplete: given a trie, return top K words with a given prefix (lexicographic).
+Implement LRU cache with O(1) get and put using linked list + hashmap.
+Implement LFU cache (least frequently used) with O(1) operations (advanced).
+Implement a bloom filter (bit array + hash functions) and test false positive rate.
+Implement a simple hash table from scratch with separate chaining collision handling.
+Implement open addressing hash table with linear probing and resizing.
+Implement string hashing (rolling hash) and use it for substring search (Rabin‑Karp).
+Implement KMP (Knuth‑Morris‑Pratt) string search algorithm.
+Implement Boyer‑Moore string search (bad character heuristic).
+Implement an algorithm to find the longest palindromic substring (Manacher’s algorithm).
+Implement bitwise operations tasks: count set bits, reverse bits, swap bits.
+Solve the subset generation problem: print all subsets (power set) of an array.
+Generate all permutations of a string (handle duplicates to avoid repeats).
+Implement next permutation algorithm (lexicographic next).
+Implement backtracking solver for N‑Queens and count solutions for N.
+Solve Sudoku using backtracking (9x9 grid from STDIN).
+Implement a maze solver using BFS to find shortest path (grid input).
+Implement A* search on a grid with Manhattan heuristic.
+Implement reservoir sampling to pick K random items from a stream.
+Implement Fisher‑Yates shuffle for an array (uniform random permutation).
+Implement a generator (using yield) that produces an infinite sequence and consume first N.
+Implement an iterator class (SPL Iterator style) to iterate over a custom data structure.
+Measure and compare memory usage of two approaches for the same problem (use memory_get_usage).
+Profile and optimize a slow PHP function (identify bottleneck and improve).
+Implement a simple CLI JSON database: read/write JSON file, CRUD operations, concurrency-safe.
+Serialize complex objects to JSON and restore them (handle private properties).
+Implement a basic checksum/hash function for files and verify integrity (e.g., SHA256 via hash_file).
+Build a CLI program that reads a graph from STDIN and outputs shortest path distances using Bellman‑Ford (detect negative cycles).
